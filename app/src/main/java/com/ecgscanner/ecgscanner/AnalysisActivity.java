@@ -19,17 +19,18 @@ public class AnalysisActivity extends AppCompatActivity {
         ArrayList<Double> data = (ArrayList<Double>) getIntent().getExtras().get("data");
 
         GraphView graph = (GraphView) findViewById(R.id.graph);
-        DataPoint[] dataPoints = new DataPoint[]{};
-        for(int x = 1; x<data.size(); x++){
-            dataPoints.
+        DataPoint[] dataPoints = new DataPoint[data.size()];
+        for(int x = 0; x<data.size(); x++){
+            dataPoints[x] = new DataPoint(x/2.0, data.get(x));
         }
-        LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>(new DataPoint[] {
-                new DataPoint(0, 1),
-                new DataPoint(1, 5),
-                new DataPoint(2, 3),
-                new DataPoint(3, 2),
-                new DataPoint(4, 6)
-        });
+        LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>(dataPoints);
+//        LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>(new DataPoint[] {
+//                dataPoints[0],
+//                new DataPoint(1, data.get(1)),
+//                new DataPoint(2, data.get(2)),
+//                new DataPoint(3, data.get(3)),
+//                new DataPoint(4, data.get(4))
+//        });
         graph.addSeries(series);
     }
 }

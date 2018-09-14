@@ -6,28 +6,42 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
+    android:background="@drawable/gradient"
     tools:context="com.ecgscanner.ecgscanner.MainActivity">
 
     <ImageView
         android:id="@+id/imageview"
-        android:layout_weight="9"
+        android:layout_weight="15"
+        android:layout_height="0dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_marginBottom="32dp"
+        android:layout_margin="40dp"
+        android:background="@android:color/black"
+        android:src="@drawable/ic_action_camera"
+        />
+
     <Button
         android:id="@+id/btnAnalysis"
-        android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:background="@android:color/holo_red_dark"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/round"
         android:textColor="@android:color/white"
-        android:text="REQUEST ANALYSIS"/>
+        android:text="REQUEST ANALYSIS" />
+
+    <Button
+        android:id="@+id/btnUpload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/round"
+        android:textColor="@android:color/white"
+        android:text="UPLOAD ECG"/>
     <Button
         android:id="@+id/btnCamera"
-        android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_red_dark"
+        android:background="@drawable/round"
         android:textColor="@android:color/white"
         android:text="SCAN ECG"/>
 
